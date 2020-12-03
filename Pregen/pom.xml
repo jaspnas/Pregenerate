@@ -26,6 +26,14 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub OWNER Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+   </repository>
+</distributionManagement>
+  
   <repositories>
     <!-- This adds the Spigot Maven repository to the build -->
     <repository>
@@ -33,6 +41,7 @@
         <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
 </repositories>
+  
 
 <dependencies>
     <!--This adds the Spigot API artifact to the build -->
