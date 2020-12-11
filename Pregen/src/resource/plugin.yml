@@ -1,6 +1,6 @@
 name: Pregenerate
 main: com.jaspnas.pregen.Main
-version: 1.9.6
+version: 1.9.7
 author: jaspnas
 api-version: 1.16
 
