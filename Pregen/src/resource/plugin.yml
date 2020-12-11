@@ -1,0 +1,55 @@
+name: Pregenerate
+main: com.jaspnas.pregen.Main
+version: 1.9.6
+author: jaspnas
+api-version: 1.16
+
+commands:
+  pregen:
+    description: Pregenerates the world.
+    permission: pregen.pregen
+    permission-message: You don't have permission for this.
+    usage: /<command> radius world
+  checkgen:
+    description: Check
+    usage: /<command> radius world
+  legacypregen:
+    description: Same as /pregen
+    permission: pregen.pregen
+    usage: /<command> radius
+  genchunk:
+    description: Generate a single chunk!
+    permission: pregen.pregen
+    usage: /<command> world x z
+  checkchunk:
+    description: check a single chunk
+    usage: /<command> world x z
+  cancel:
+    description: Cancel running commands.
+    permission: pregen.pregen
+    usage: /<command>
+  testcommand:
+    description: dev test command
+    permission: pregen.debug
+    usage: /<command>
+  prepserver:
+    description: kick players and reload
+    permission: pregen.pregen
+    usage: /<command>
+
+permissions:
+  pregen.*:
+    description: Wildcard
+    default: false
+  pregen.pregen:
+    description: Pregenerate the world.
+    default: op
+    children:
+      pregen.pregen.use: true
+      pregen.pregen.cancel: true
+      pregen.pregen.bypass: true
+  pregen.debug:
+    description: debug
+    default: false
+    children:
+      pregen.debug: true
